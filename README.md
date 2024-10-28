@@ -77,7 +77,7 @@ implement to enhance this app, if time permits.
     - Address (validated against a provided dataset of Los Angeles addresses)
     - Preferred timeslot
   - [ ] Notify residents that their preferred timeslot is only indicative and that they will receive confirmation a few hours before the scheduled visit.
-  - [ ] Store the request status (e.g., pending, visited) using local storage or IndexedDB.
+  - [ ] Store the request status (e.g., pending, visited) using local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
   - [ ] Allow residents to cancel an appointment using an application code sent to their email.
 
 - Admin Interface
@@ -95,11 +95,12 @@ implement to enhance this app, if time permits.
 
   - Data Management
 
-  - [ ] Use local storage or IndexedDB to temporarily save resident requests.
-  - [ ] Implement data validation to ensure addresses match the provided dataset.
+  - [ ] Use local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to temporarily save resident requests.
+  - [ ] Implement data validation to ensure addresses match the provided dataset from [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d).
 
 ### Extras (Not Required)
 
+- [ ] Use [Ethereal SMTP](https://ethereal.email/) for sending email notifications.
 
 ## Acceptance Criteria
 
@@ -130,3 +131,4 @@ We extend our heartfelt gratitude to the wider developer community, whose invalu
 If you aren't yet a member of Chingu we invite you to join us. We help our
 members transform what they've learned in courses & tutorials into the
 practical experience employers need and want.
+
