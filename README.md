@@ -78,7 +78,7 @@ implement to enhance this app, if time permits.
     - Preferred timeslot
   - [ ] Notify residents that their preferred timeslot is only indicative and that they will receive confirmation a few hours before the scheduled visit.
   - [ ] Store the request status (e.g., pending, visited) using local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
-  - [ ] Allow residents to cancel an appointment using an application code sent to their email.
+  - [ ] Allow residents to cancel an appointment by calling a specific phone number (e.g., 1-800-123-4567) provided in their confirmation message when they submit an appointment application.
 
 - Admin Interface
 
@@ -131,4 +131,3 @@ We extend our heartfelt gratitude to the wider developer community, whose invalu
 If you aren't yet a member of Chingu we invite you to join us. We help our
 members transform what they've learned in courses & tutorials into the
 practical experience employers need and want.
-
