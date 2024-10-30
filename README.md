@@ -84,23 +84,23 @@ implement to enhance this app, if time permits.
 
   - [ ] Implement a login system accessible through /admin URL where city hall employees can enter an approved email to access the Admin page (no complex authentication required, emails can be validated against a list in a .env file).
   - [ ] Display all appointment requests submitted by residents.
-  - [ ] Allow employees to retrieve the most efficient planning for a specified time period (e.g., daily, weekly).
+  - [ ] Allow employees to retrieve the most efficient planning for a specified time period (e.g., daily, weekly, etc).
   - [ ] Provide an option to export the planned visits in a downloadable format (PDF, Excel, etc.) with details such as visit time slot, resident’s contact information, and address.
 
   - Algorithmic Planning
 
-  - [ ] Develop a basic scheduling algorithm that optimizes visit order based on address proximity, traffic, and average visit duration (30 minutes).
-  - [ ] Prioritize efficiency, aiming to minimize travel time between consecutive visits.
-  - [ ] Example Simple Algorithm: For adjacent addresses, order them by street name and number for consecutive visits.
+    - [ ] Develop a basic scheduling algorithm that optimizes visit order based on address proximity, traffic, and average visit duration (e.g., 30 minutes).
+    - [ ] Prioritize efficiency, aiming to minimize travel time between consecutive visits.
+    - [ ] Example Simple Algorithm: For adjacent addresses, order them by street name and house number for consecutive visits.
 
-  - Data Management
+- Data Management
 
   - [ ] Use local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to temporarily save resident requests.
   - [ ] Implement data validation to ensure addresses match the provided dataset from [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d).
 
 ### Extras (Not Required)
 
-- [ ] Use [Ethereal SMTP](https://ethereal.email/) for sending email notifications.
+- [ ] Use [Ethereal SMTP](https://ethereal.email) for sending email notifications.
 
 ## Acceptance Criteria
 
@@ -124,7 +124,7 @@ implement to enhance this app, if time permits.
 
 ## Acknowledgements
 
-We extend our heartfelt gratitude to the wider developer community, whose invaluable insights and expertise consistently inspire and elevate our projects. We are also deeply thankful for the powerful tools and services provided by [Google](https://google.com), [Cloudinary](https://cloudinary.com), and [AWS](https://aws.amazon.com), which play a crucial role in making our journey possible. Your contributions and innovations drive our success, and for that, we are sincerely grateful.
+We extend our heartfelt gratitude to the wider developer community, whose invaluable insights and expertise consistently inspire and elevate our projects. We are also deeply thankful for the powerful tools and services provided by [Google](https://google.com) and [Ethereal](https://ethereal.email), and [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), which play a crucial role in making our journey possible. Your contributions and innovations drive our success, and for that, we are sincerely grateful.
 
 ## About Chingu
 
