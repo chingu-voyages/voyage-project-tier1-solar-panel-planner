@@ -1,4 +1,4 @@
-# voyage-project-tier1-expense-splitter
+# voyage-project-tier1-solar-panel-planner
 
 ## Table of Contents
 
@@ -12,17 +12,19 @@
 
 Welcome, Chingus!
 
-Are you ready to simplify the way you split expenses with friends, family, or roommates? Experience the convenience of managing shared costs effortlessly.
+The city of Los Angeles is encouraging residents to install private solar panels as part of a local initiative to combat global warming. This project provides a free service where a city-hired specialist evaluates the installation and maintenance costs of solar panels. The initial MVP is a web-based application enabling residents to schedule appointments and allowing city employees to manage and plan these visits effectively.
 
-From casual dinners to group vacations or birthday parties, splitting expenses has always been a part of our social interactions. Over time, the need for an efficient and fair way to manage shared costs has grown, especially in our increasingly interconnected world.
+![Solar Panel Installation](./assets/solar-panel-installation.jpg)
 
-![Friend Sitting Out](./assets/friends-sitting-out.png)
+In this voyage, your team will create a user-friendly solar panel planning application that simplifies the process of scheduling evaluations. Get ready to combine your problem-solving skills and creativity to build a tool that makes solar panel installation and maintenance planning a breeze!
 
-In this voyage, your team will create a user-friendly expense splitting application that takes the headache out of shared finances. Get ready to combine your problem-solving skills and creativity to build a tool that makes group expense management a breeze!
+The application supports two main roles:
 
-Happy splitting!
+**Resident:** Can request an appointment for a solar panel evaluation by submitting their contact details, address, and preferred timeslot.
 
-![Example Expense Splitter App](./assets/example-expense-splitter-app.png)
+**City Hall Employee:** Can access appointment requests, generate visit schedules for specialists, and export planning details in a downloadable/printable format.
+
+![Example Solar Energy App](./assets/example-solar-energy-app.png)
 
 ## General Instructions
 
@@ -53,6 +55,10 @@ implement to enhance this app, if time permits.
 - [ ] This is a purely frontend application. No backend is required.
 - [ ] You may use any languages, tools, or libraries you prefer when designing and building this app.
 - [ ] You may **_NOT_** use AI-based solution generators like GitHub Copilot.
+- [ ] Useful links and resources:
+  - [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d)
+  - [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  - [Ethereal SMTP](https://ethereal.email)
 
 #### Styling
 
@@ -64,106 +70,68 @@ implement to enhance this app, if time permits.
 #### Functionality
 - Overview
 
-  - [ ] Develop a single-page application (SPA) for splitting group expenses.
+  - [ ] Develop a single-page application (SPA) for solar panel application.
 
-- Expense Group Management
+- Resident Interface
 
-  - [ ] Users should be able to create an expense group with the following details:
-    - Group ID
-    - Group Name
-  - [ ] Ability to add/update/remove member/participant to expense group utilizing
-    - Member/Participant ID
-    - Member/Participant Name
+  - [ ] Allow residents to submit a request for a solar panel evaluation by completing a web form with:
+    - Name
+    - Email
+    - Phone Number
+    - Address (validated against a provided dataset of Los Angeles addresses)
+    - Preferred timeslot
+  - [ ] Notify residents that their preferred timeslot is only indicative and that they will receive confirmation a few hours before the scheduled visit.
+  - [ ] Store the request status (e.g., pending, visited) using local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
+  - [ ] Allow residents to cancel an appointment by calling a specific phone number (e.g., 1-800-123-4567) provided in their confirmation message when they submit an appointment application.
 
-- Expense Management
+- Admin Interface
 
-  - [ ] Add expenses with the following details:
-    - Name of expense
-    - Description
-    - Amount
-    - Participant name
-    - Date (captured automatically)
-  - [ ] User should be able to edit and delete an existing expense (Date should remian Immutable)
+  - [ ] Implement a login system accessible through /admin URL where city hall employees can enter an approved email to access the Admin page (no complex authentication required, emails can be validated against a list in a .env file).
+  - [ ] Display all appointment requests submitted by residents.
+  - [ ] Allow employees to retrieve the most efficient planning for a specified time period (e.g., daily, weekly, etc).
+  - [ ] Provide an option to export the planned visits in a downloadable format (PDF, Excel, etc.) with details such as visit time slot, resident’s contact information, and address.
 
-- Calculations
+  - Algorithmic Planning
 
-  - [ ] Automatically calculate and display who owes what to whom within the group
-  - [ ] Update calculations in real-time as expenses are added, modified, or deleted
+    - [ ] Develop a basic scheduling algorithm that optimizes visit order based on address proximity, traffic, and average visit duration (e.g., 30 minutes).
+    - [ ] Prioritize efficiency, aiming to minimize travel time between consecutive visits.
+    - [ ] Example Simple Algorithm: For adjacent addresses, order them by street name and house number for consecutive visits.
 
-- Summary and Visualization
+- Data Management
 
-  - [ ] Provide a summary view of total group expenses and individual balances for each participant in the group
-
-- Data Persistence
-
-  - [ ] Implement local storage to save expense group data in the browser
-  - [ ] Add ability to export data (e.g., PDF, Excel)
+  - [ ] Use local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to temporarily save resident requests.
+  - [ ] Implement data validation to ensure addresses match the provided dataset from [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d).
 
 - User Interface and Experience
-
-  - [ ] Ensure the application provides a seamless user experience for managing expenses and viewing balances
-  - [ ] Implement intuitive UI/UX elements to guide users through the expense splitting process
-  - [ ] Use responsive design techniques to ensure the application is accessible and functional across various devices and screen sizes
+  - [ ] Use responsive design techniques to ensure the application is accessible and functional across various devices and screen sizes.
 
 ### Extras (Not Required)
 
-- Expense Group Management
-
-  - [ ] Allow creation of multiple expense groups (optional)
-
-- Summary and Visualization
-
-  - [ ] Implement simple charts or graphs to visualize expense distribution (e.g can be a bar chart which shows each participant expenses in relation to the average owed amount of the group)
-
-- Multi-currency Support
-
-  - [ ] Allow expenses in multiple currencies
-
-- Data Persistence
-
-  - Add ability to export data as Chart
+- [ ] Implementing the "Address" field with dropdown and autocomplete functionality.
 
 ## Acceptance Criteria
 
-- Expense Group Management
+- Resident Interface
 
-  - [ ] Each group can have multiple members
+  - [ ] Users can submit requests with valid addresses, personal details, and timeslots.
+  - [ ] Preferred timeslots are submitted but are not guaranteed.
+  - [ ] Requests persist across sessions in local storage or IndexedDB.
+  - [ ] Users can cancel appointments using an application code sent to their email.
 
-- Expense Management
+- Admin Interface
 
-  - [ ] Users can add new expenses with all required details
-    - Name of expense
-    - Description
-    - Amount
-    - Participant name
-    - Date (captured automatically)
-  - [ ] Existing expenses can be edited and deleted
-  - [ ] Date of expense is automatically captured
+  - [ ] Admins can view all resident requests.
+  - [ ] Admins can generate and print/export the optimized visit schedule.
+  - [ ] The login restricts access to approved city hall employee emails only.
 
-- Calculations
+- Scheduling Algorithm
 
-  - [ ] The app accurately calculates balances within the group
-  - [ ] Calculations update in real-time when expenses change
-
-- Summary and Visualization
-
-  - [ ] Users should be provided with a clear summary of total expenses and individual balances.
-
-- Data Persistence
-
-  - [ ] Expense data persists across browser sessions using local storage
-
-- User Interface and Experience
-
-  - [ ] The application provides an intuitive and seamless user experience
-  - [ ] Responsive design ensures functionality across various devices and screen sizes
-
-- Export Functionality
-  - [ ] Users should have the ability to export the data as (e.g., PDF, Excel)
+  - [ ] Planning considers the efficiency of visit order based on address and time constraints.
+  - [ ] Schedule export format includes time slot, address, and contact information for each appointment.
 
 ## Acknowledgements
 
-We extend our heartfelt gratitude to the wider developer community, whose invaluable insights and expertise consistently inspire and elevate our projects. We are also deeply thankful for the powerful tools and services provided by [Google](https://google.com), [Cloudinary](https://cloudinary.com), and [AWS](https://aws.amazon.com), which play a crucial role in making our journey possible. Your contributions and innovations drive our success, and for that, we are sincerely grateful.
+We extend our heartfelt gratitude to the wider developer community, whose invaluable insights and expertise consistently inspire and elevate our projects. We are also deeply thankful for the powerful tools and services provided by [Google](https://google.com) and [Ethereal](https://ethereal.email), and [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API), which play a crucial role in making our journey possible. Your contributions and innovations drive our success, and for that, we are sincerely grateful.
 
 ## About Chingu
 
