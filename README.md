@@ -102,9 +102,12 @@ implement to enhance this app, if time permits.
   - [ ] Use local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to temporarily save resident requests.
   - [ ] Implement data validation to ensure addresses match the provided dataset from [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d).
 
+- User Interface and Experience
+  - [ ] Use responsive design techniques to ensure the application is accessible and functional across various devices and screen sizes.
+
 ### Extras (Not Required)
 
-- [ ] Use [Ethereal SMTP](https://ethereal.email) for sending email notifications.
+- [ ] Implementing the "Address" field with dropdown and autocomplete functionality.
 
 ## Acceptance Criteria
 
