@@ -56,9 +56,9 @@ implement to enhance this app, if time permits.
 - [ ] You may use any languages, tools, or libraries you prefer when designing and building this app.
 - [ ] You may **_NOT_** use AI-based solution generators like GitHub Copilot.
 - [ ] Useful links and resources:
-  - [ ] [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d)
-  - [ ] [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-  - [ ] [Ethereal SMTP](https://ethereal.email)
+  - [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d)
+  - [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
+  - [Ethereal SMTP](https://ethereal.email)
 
 #### Styling
 
