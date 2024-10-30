@@ -110,21 +110,21 @@ implement to enhance this app, if time permits.
 
 - Resident Interface
 
-- [ ] Users can submit requests with valid addresses, personal details, and timeslots.
-- [ ] Preferred timeslots are submitted but are not guaranteed.
-- [ ] Requests persist across sessions in local storage or IndexedDB.
-- [ ] Users can cancel appointments using an application code sent to their email.
+  - [ ] Users can submit requests with valid addresses, personal details, and timeslots.
+  - [ ] Preferred timeslots are submitted but are not guaranteed.
+  - [ ] Requests persist across sessions in local storage or IndexedDB.
+  - [ ] Users can cancel appointments using an application code sent to their email.
 
 - Admin Interface
 
-- [ ] Admins can view all resident requests.
-- [ ] Admins can generate and print/export the optimized visit schedule.
-- [ ] The login restricts access to approved city hall employee emails only.
+  - [ ] Admins can view all resident requests.
+  - [ ] Admins can generate and print/export the optimized visit schedule.
+  - [ ] The login restricts access to approved city hall employee emails only.
 
 - Scheduling Algorithm
 
-- [ ] Planning considers the efficiency of visit order based on address and time constraints.
-- [ ] Schedule export format includes time slot, address, and contact information for each appointment.
+  - [ ] Planning considers the efficiency of visit order based on address and time constraints.
+  - [ ] Schedule export format includes time slot, address, and contact information for each appointment.
 
 ## Acknowledgements
 
