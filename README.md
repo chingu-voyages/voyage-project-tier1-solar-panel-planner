@@ -58,7 +58,6 @@ implement to enhance this app, if time permits.
 - [ ] Useful links and resources:
   - [Los Angeles Addresses](https://catalog.data.gov/dataset/addresses-in-the-city-of-los-angeles/resource/cfcd5dce-b96c-43e8-bd36-aac11d14bf7d)
   - [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
-  - [Ethereal SMTP](https://ethereal.email)
 
 #### Styling
 
@@ -107,7 +106,7 @@ implement to enhance this app, if time permits.
 
 ### Extras (Not Required)
 
-- [ ] Implementing the "Address" field with dropdown and autocomplete functionality.
+- [ ] Implement the "Address" field with dropdown and autocomplete functionality.
 
 ## Acceptance Criteria
 
