@@ -115,7 +115,6 @@ implement to enhance this app, if time permits.
   - [ ] Users can submit requests with valid addresses, personal details, and timeslots.
   - [ ] Preferred timeslots are submitted but are not guaranteed.
   - [ ] Requests persist across sessions in local storage or IndexedDB.
-  - [ ] Users can cancel appointments using an application code sent to their email.
 
 - Admin Interface
 
